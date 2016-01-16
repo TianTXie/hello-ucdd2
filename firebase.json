@@ -1,0 +1,9 @@
+{
+  "firebase": "tiantianxie",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
