@@ -36,13 +36,14 @@
         // create a firebase reference to the root
         var ref = new Firebase('https://tiantianxie.firebaseio.com/')
 
+
         // read data from the location bio/favorite_foods, only once
-        ref.child('bio/favorite_foods').once('value', function(snapshot){
-          var foods = snapshot.val()
-          foods.forEach(function(food){
-            $('#foods').append('<li class="collection-item">' + food + '</li>')
-          })
+        ref.child('bio/favorite_foods').on('value', function(snapshot){
+
+           console.log(snapshot.val());
+
         })
+        console.log("your message")
       </script>
     </body>
   </html>
