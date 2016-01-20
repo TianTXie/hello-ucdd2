@@ -40,7 +40,10 @@
         // read data from the location bio/favorite_foods, only once
         ref.child('bio/favorite_foods').on('value', function(snapshot){
 
-           console.log(snapshot.val());
+           var foods = snapshot.val()
+          foods.forEach(function(food){
+            $('#foods').append('<li class="collection-item">' + food + '</li>')
+          })
 
         })
         console.log("your message")
