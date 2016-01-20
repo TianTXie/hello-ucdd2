@@ -38,7 +38,7 @@
 
 
         // read data from the location bio/favorite_foods, only once
-        ref.child('bio/favorite_foods').on('value', function(snapshot){
+        ref.child('bio/favorite_foods').once('value', function(snapshot){
 
            var foods = snapshot.val()
           foods.forEach(function(food){
